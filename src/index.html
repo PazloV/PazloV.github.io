@@ -13,107 +13,124 @@
 </head>
 
 <body>
+    <!--  <progress min="0" max="10" value="0">Загрузка</progress> -->
+    <div class="loading">
+        <p>Loading</p>
+    </div>
     <heder>
         <nav>
             <div class="logo">Aleksey Pazlov</div>
             <div class="menu">
                 <ul>
-                    <li>Обо мне</li>
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Прайс</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
+                    <li><a href="#">Обо мне</a>
+                    </li>
+                    <li><a href="#">Услуги</a>
+                    </li>
+                    <li><a href="#">Кейсы</a>
+                    </li>
+                    <li><a href="#">Прайс</a>
+                    </li>
+                    <li><a href="#">Отзывы</a>
+                    </li>
+                    <li><a href="#">Контакты</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </heder>
-    <div class="main">
-        <div class="tetle_conteiner">
-            <h1>Привет <br> Я Aleksey Pazlov</h1>
-            <h4>Фул стег Web разработчик</h4>
-            <input type="sumbit" value="Обо мне">
-            <input type="sumbit" value="Мои работы">
-        </div>
-    </div>
-    <div class="To_me">
+    <main>
+        <section class="main">
+            <div class="tetle_conteiner">
+                <h1>Привет <br> Я Aleksey Pazlov</h1>
+                <h4>Фул стег Web разработчик</h4>
+                <input type="button" value="Обо мне">
+                <input type="button" value="Мои работы">
+            </div>
+        </section>
+    </main>
+    <section class="To_me">
         <h3>Обо мне</h3>
-        <img class="tetle_photo" src="img/frai1.jpg" alt="...Sorry" />
+        <img class="tetle_photo" src="img/frai2.png" alt="...Sorry" />
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quas adipisci inventore placeat veritatis accusamus, vero, dolor, asperiores molestiae harum atque necessitatibus delectus sapiente. Quam alias, nulla officiis assumenda voluptatibus! Totam, dolores.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quas adipisci inventore placeat veritatis accusamus, vero, dolor, asperiores molestiae harum atque necessitatibus delectus sapiente. Quam alias, nulla officiis assumenda voluptatibus! Totam, dolores.</p>
-        <input type="sumbit" value="Скачать резюме">
-    </div>
-    <div class="I_can">
+        <input type="button" value="Скачать резюме">
+    </section>
+    <section class="I_can">
         <h3>ЧТО Я УМЕЮ</h3>
-
         <div class="menu_i_can">
             <ul>
                 <li>
+                    <img src="img/noyt.png" alt="...Sorry" class="noyt" />
                     <h5>Веб-дизайн</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit, praesentium fuga ipsam molestiae earum!</p>
                 </li>
                 <li>
+                    <img src="img/sign.png" alt="...Sorry" class="sing">
                     <h5>Разработка</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum ut sit!</p>
                 </li>
                 <li>
+                    <img src="img/rocket.png" alt="...Sorry" class="rocket">
                     <h5>СЕО-Оптимизация</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vero laboriosam voluptatibus ratione, ducimus sit?</p>
                 </li>
                 <li>
+                    <img src="img/rup.png" alt="...Sorry" class="rup">
                     <h5>Маркетинг</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum illo similique sint nam reiciendis.</p>
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="cases">
+    </section>
+    <section class="cases">
         <h3>КЕЙСЫ</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aperiam consectetur, officia explicabo temporibus iste quaerat nesciunt!</p>
-    </div>
-    <div class="data_client">
+    </section>
+    <section class="data_client">
         <h5>CLIENT:</h5>
         <p>какя-то компания</p>
         <h5>WEBSITE:</h5>
         <p>www.soemdomain.com</p>
-        <input type="sumbit" value="VISIT LIVE SITE">
-    </div>
-    <div class="project_name">
+        <input type="button" value="VISIT LIVE SITE">
+    </section>
+    <section class="project_name">
         <h4>Назваине проэкта</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint illo nemo doloremque, dolorem hic, natus? Qui distinctio accusamus accusantium saepe laborum, ipsam architecto fuga eum odit nesciunt quia in esse optio ullam sint non eaque cum. Ex laborum explicabo libero, rerum impedit! Illo laborum maxime laudantium maiores, nostrum necessitatibus quaerat facere dolor?</p>
-    </div>
-    <div class="cost_calculation">
+    </section>
+    <section class="cost_calculation">
         <h3>Расчет стоимости</h3>
         <from action="#">
             <h4>Тип сайта</h4>
             <select name="opt" id="list">
-                <!-->не смог написать выберите пункт меню!!!</!-->
                 <option value="opt1">Опция 1</option>
                 <option value="opt2">Опция 2</option>
             </select>
             <h4>Дизайн</h4>
             <select name="opt" id="list">
-                <!-->не смог написать выберите пункт меню!!!</!-->
                 <option value="opt1">Опция 1</option>
                 <option value="opt2">Опция 2</option>
             </select>
             <h4>Адаптивность</h4>
             <select name="opt" id="list">
-                <!-->не смог написать выберите пункт меню!!!</!-->
                 <option value="opt1">Опция 1</option>
                 <option value="opt2">Опция 2</option>
             </select>
         </from>
         <p>Сроки</p>
         <p>Стоимость</p>
-    </div>
-    <div class="Statistics">
+    </section>
+    <section class="Statistics">
         <h3>Немного статистики</h3>
+        <img src="img/cherta_zag.png" alt="" class="photo__cherta">
         <div class="menu_statistics">
+            <img src="img/smail.png" alt="" class="photo__smail">
+            <img src="img/skob.png" alt="" class="photo__skob">
+            <img src="img/galk.png" alt="" class="photo__galk">
+            <img src="img/kub.png" alt="" class="photo__kub">
             <ul>
                 <li>
                     <h4>120</h4>
-                    <p>Числос частвивых клиентов</p>
+                    <p>Cчаствивых клиентов</p>
                 </li>
                 <li>
                     <h4>4.600</h4>
@@ -129,36 +146,43 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="Reviews">
+    </section>
+    <section class="Reviews">
         <h3>Отзывы</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit rerum ex placeat sit iusto ea, cupiditate ratione, repellendus, dolorum perferendis omnis? Quasi beatae incidunt soluta ea molestiae cupiditate enim perferendis.</p>
         <p><b>Михаил</b> Ген.Директор ПАО "Газпром".</p>
-    </div>
-    <footer>
-        <div class="contakt">
-            <h3>Мои контакты</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat ullam vero modi laborum rem!</p>
-            <div class="menu_contakt">
-                <ul>
-                    <li>
-                        <p>Волгорад
-                            <br>царицинская опера</p>
-                    </li>
-                    <li>
-                        <p>user.pazlov@ya.ru</p>
-                    </li>
-                    <li>+7999999999</li>
-                </ul>
-            </div>
-            <h5>Оставте мне сообщение</h5>
-            <from>
-                <input type="text" name="text_input" value="" placeholder="Имя">
-                <input type="text" name="text_input" value="" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="sumbit" value="Отправить">
-            </from>
+    </section>
+    <section class="contakt">
+        <h3>Мои контакты</h3>
+        <img src="/img/cherta_zag.png" alt="" class="photo_cherta">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat ullam vero modi laborum rem!</p>
+        <div class="menu_contakt">
+            <ul>
+                <li>
+                    <p>Волгорад
+                        <br>царицинская опера</p>
+                </li>
+                <li>
+                    <p>user.pazlov@ya.ru</p>
+                </li>
+                <li>
+                    <p>+7999999999</p>
+                </li>
+            </ul>
         </div>
+        <h5>Оставте мне сообщение</h5>
+        <from id="form_" action="#">s
+            <input class="name" type="text" name="text_input" value="" placeholder="Имя">
+            <input class="email" type="text" avtocomplete="off" name="text_input" value="" placeholder="Email">
+            <textarea name="" id="text" cols="97" rows="8"></textarea>
+            <input class="send" type="button" value="Отправить">
+        </from>
+    </section>
+    <footer>
+        <section class="footer__">
+            <p>Copyright © 2021 Андрей Браун. Design by Web</p>
+           <!-- <img src="img/footer_cherta.jpg" alt="" class="photo__footer_cherta"> -->
+        </section>
     </footer>
 </body>
 

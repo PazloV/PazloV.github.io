@@ -1,51 +1,148 @@
-body{
+body {
     font-family: Arial, sans-serif;
 }
-nav{
+/*
+progress{
+    width: 100%;
+    height: 100%;
+    animation: prog 2s ease;
+}
+@keyframes prog{
+    0%{
+        .value: 0;
+    }
+}
+*/
+
+.loading {
+    width: 0px;
+    height: 30px;
+    border: 2px solid #fff;
+    background-color: #03032e;
+    animation: load 5s ease;
+}
+.loading p {
+    font-size: 22px;
+    color: #fff;
+    padding-left: 0px;
+    animation: load_p 5s ease;
+}
+@keyframes load_p {
+    from {
+        padding-left: 0px;
+    }
+    to {
+        padding-left: 100%;
+    }
+}
+@keyframes load {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+nav {
     width: 100%;
     height: 60px;
     background: #344051;
 }
-.logo{
+.logo {
     color: #fff;
     font-size: 28px;
     line-height: 60px;
     padding-left: 200px;
     float: left;
+    animation: comming 2s ease;
+}
+@keyframes comming {
+    from {
+        opacity: 0;
     }
-.menu{
+    to {
+        opacity: 1;
+    }
+}
+main {
+    height: 100%;
+    width: 100%;
+}
+.menu {
     float: left;
     padding-left: 332px;
-    }
-.menu li{
+}
+.menu li {
     float: left;
     line-height: 60px;
     color: #fff;
     margin-right: 30px;
     font-size: 14px;
     text-transform: uppercase;
+    animation: topshift 2s ease forwards;
+    opacity: 0;
 }
-.main{
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6) {
+    animation-delay: 2s;
+}
+.menu li a {
+    transition: all 0.1s;
+    color: #fff;
+    transform: scale(1);
+    display: inline-block;
+}
+.menu li a:visited {
+    color: #fff;
+}
+.menu li a:hover {
+    color: #e88604;
+}
+.menu li a:active {
+    transform: scale(1.1);
+}
+.main {
     width: 100%;
     height: calc(100% - 60px);
-    background: url(../img/frai1.png) 90% 100%/auto 85% no-repeat ,url(../img/Fon.jpg) center/cover no-repeat;
-    }
-.tetle_conteiner{
+    background: url(../img/frai2.png) 90% 100%/auto 85% no-repeat, url(../img/Fon.jpg) center/cover no-repeat;
+}
+.tetle_conteiner {
     float: left;
     margin: 250px 0px 0px 180px;
     color: #2c384a;
     text-align: center;
 }
-.tetle_conteiner h1{
+.tetle_conteiner h1 {
     font-size: 60px;
     font-weight: bold;
 }
-.tetle_conteiner h4{
+.tetle_conteiner h4 {
     margin-top: 30px;
     color: #79818d;
     font-size: 20px;
 }
-.tetle_conteiner input{
+.tetle_conteiner input {
     height: 24px;
     text-align: center;
     border: 2px solid #79818d;
@@ -55,70 +152,96 @@ nav{
     font-size: 12px;
     padding: 2px 8px;
     margin: 30px 14px 0 14px;
+    transition: all 0.1s;
+    transform: scale(1);
 }
-.To_me{
+.tetle_conteiner input:hover {
+    background: #344051;
+    color: #fff;
+}
+.tetle_conteiner input:active {
+    transform: scale(1.1);
+}
+.To_me {
     width: 100%;
     height: 80%;
     text-align: center;
     margin: 10px;
-/*    background: url(../img/frai1.png) 50% 30%/auto 30% no-repeat border-box; */
 }
-.To_me h3{  
+.To_me h3 {
     margin-top: 20px;
     color: #263244;
     font-size: 20px;
     text-transform: uppercase;
     padding: 20px;
+    animation: tome 2s;
     background: url(../img/cherta_zag.png) 50% 100%/auto 5% no-repeat;
     margin-bottom: 100px;
 }
-.tetle_photo{
+@keyframes tome {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.tetle_photo {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    
 }
-
-.To_me p{
+.To_me p {
     padding: 20px;
     width: 700px;
     margin-left: 320px;
     text-align: justify;
     font-size: 10px;
 }
-.To_me input{
-    height: 20px;
+.To_me input {
+    height: 40px;
     border: 2px solid #79818d;
-    background: url(../img/seve1.png) 10% 50%/auto 100% no-repeat;
+    background: url(../img/seve1.png) 10% 50%/auto 50% no-repeat;
     border-radius: 5px;
     color: #79818d;
     font-size: 12px;
     text-align: center;
-    padding: 4px 10px;
-    margin: 30px 16px 0 16px;
+    padding: 7px 15px 7px 50px;
+    margin: 15px 30px 0 0px;
+    transition: all 0.1s;
+    transform: scale(1);
 }
-.I_can{
+.To_me input:hover {
+    background: #344051;
+    color: #fff;
+}
+.To_me input:active {
+    transform: scale(1.1);
+}
+.I_can {
     width: 100%;
     height: 80%;
-    background: url(../img/noyt.png) 13% 55% /auto 10% no-repeat, 
+    background:
+    /*url(../img/noyt.png) 13% 55% /auto 10% no-repeat, 
         url(../img/sign.png) 36% 55% /auto 10% no-repeat,
         url(../img/rocket.png) 60% 55% /auto 10% no-repeat,
         url(../img/rup.png) 83% 55% /auto 10% no-repeat,
-        url(../img/fon_a_cam.jpg) center/cover no-repeat;
+    */
+    url(../img/fon_a_cam.jpg) center/cover no-repeat;
 }
-.I_can h3{
+.I_can h3 {
     color: #263244;
     font-size: 20px;
     text-align: center;
     padding: 20px;
     background: url(../img/cherta_zag.png) 50% 100%/auto 5% no-repeat;
-    margin-bottom: 280px; 
+    margin-bottom: 230px;
 }
-.menu_i_can{
-    float: left; 
+.menu_i_can {
+    float: left;
     padding-left: 100px;
 }
-.menu_i_can li{
+.menu_i_can li {
     float: left;
     height: 250px;
     width: 200px;
@@ -126,23 +249,35 @@ nav{
     margin-right: 100px;
     border: 4px, solid;
 }
-.menu_i_can li h5{
+.noyt {
+    padding-left: 35%;
+}
+.sing {
+    padding-left: 35%;
+}
+.rocket {
+    padding-left: 35%;
+}
+.rup {
+    padding-left: 35%;
+}
+.menu_i_can li h5 {
     color: #cf7600;
     text-align: center;
     font-size: 16px;
     font-weight: 900;
 }
-.menu_i_can li p{
+.menu_i_can li p {
     font-size: 10px;
     text-align: center;
     line-height: 1.3;
 }
-.cases{
+.cases {
     height: 100%;
     width: 100%;
     background: url(../img/cas_fon.png) 50% 90%/auto 70% no-repeat;
 }
-.cases h3{
+.cases h3 {
     color: #263244;
     font-size: 20px;
     text-align: center;
@@ -150,7 +285,7 @@ nav{
     background: url(../img/cherta_zag.png) 50% 100%/auto 5% no-repeat;
     margin-bottom: 30px;
 }
-.cases p{
+.cases p {
     text-align: center;
     font-size: 14px;
 }
@@ -158,18 +293,18 @@ nav{
     margin-left: 17%;
     height: 30%;
     width: 20%;
-    font-size: 16px;    
+    font-size: 16px;
     line-height: 1.3;
     float: left;
 }
-.data_client h5{
+.data_client h5 {
     font-size: 20px;
 }
-.data_client p{
+.data_client p {
     font-size: 12px;
 }
-.data_client input{
-/*    height: 24px;*/
+.data_client input {
+    /*    height: 24px;*/
     text-align: center;
     border: 2px solid #63b5ae;
     background: #63b5ae;
@@ -178,107 +313,230 @@ nav{
     font-size: 12px;
     padding: 2px 8px;
     margin: 2px 14px 0 0px;
+    transition: all 0.1s;
+    transform: scale(1);
 }
-.project_name{
+.data_client input:hover {
+    background: #f4f8f8;
+    color: #63b5ae;
+}
+.data_client input:active {
+    transform: scale(1.1);
+}
+.project_name {
     height: 30%;
     width: 83%;
 }
-.project_name h4{
+.project_name h4 {
     padding-top: 3px;
     font-size: 20px;
 }
-.project_name p{
+.project_name p {
     padding-top: 5px;
     font-size: 12px;
 }
-.cost_calculation{
+.cost_calculation {
     margin-left: 25%;
     height: 70%;
     width: 50%;
     background: url(../img/cherta.jpg) 50% 77%/auto 2px no-repeat;
 }
-.cost_calculation h3{
+.cost_calculation h3 {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
     padding-bottom: 40px;
 }
-.cost_calculation h4{
+.cost_calculation h4 {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
 }
-#list{
+#list {
     text-align: center;
     border: 2px solid #eeeeee;
     background: #eee;
-/*    border-radius: 5px; */
+    /*    border-radius: 5px; */
     color: #a1a1a1;
     font-size: 12px;
     padding: 15px 600px 15px 0px;
     margin: 10px 14px 20px 0px;
 }
-.cost_calculation p{
-    padding: 16px; 
+.cost_calculation p {
+    padding: 16px;
     font-size: 14px;
     line-height: .5;
 }
-.Statistics{
-    height: 70%;
+.Statistics {
+    height: 100%;
     width: 100%;
-    background: url(../img/cherta_zag.png) 50% 20%/auto 1% no-repeat,
-        url(../img/smail.png) 20% 50%/ auto 10% no-repeat,
-        url(../img/skob.png) 40% 50%/ auto 10% no-repeat,
-        url(../img/galk.png) 60% 50%/ auto 10% no-repeat,
-        url(../img/kub.png) 80% 50%/ auto 10% no-repeat,
-        url(../img/fon_static.jpg) center/cover no-repeat;  
+    background:
+    /*    url(../img/cherta_zag.png) 50% 20%/auto 1% no-repeat, 
+        url(../img/smail.png) 20% 50%/ auto 10% no-repeat, 
+        url(../img/skob.png) 40% 50%/ auto 10% no-repeat, 
+        url(../img/galk.png) 60% 50%/ auto 10% no-repeat, 
+        url(../img/kub.png) 80% 50%/ auto 10% no-repeat,*/
+    url(../img/fon_static.jpg) center/cover no-repeat;
+    transition: 3s;
+    transform: scale3d(1, 1, 1);
 }
-.Statistics h3{
+.Statistics:hover {
+    transform: scale3d(0.9, 0.9, 0.9);
+}
+.Statistics h3 {
     padding-top: 30px;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
 }
-.menu_statistics li{
-    padding-top: 17%;
-    padding-left: 19%;
-    height: 30%;
-    width: 20%;
-    float: left;
+.photo__cherta {
+    padding-top: 30px;
+    padding-left: 47.5%;
 }
-.menu_statistics h4{
-    font-size: 20px;
+.menu_statistics li {
+    float: left;
+    height: 20%;
+    width: 25%;
+    padding-left: 60px;
+}
+.photo__smail {
+    /*    padding-top: 10%;
+    padding-left: 20%;
+    padding-bottom: 15px; */
+    padding: 10% 0 15px 13.5%;
+}
+.photo__skob {
+    padding: 10% 0 15px 20%;
+}
+.photo__galk {
+    padding: 10% 0 15px 20.5%;
+}
+.photo__kub {
+    padding: 10% 0 15px 20.5%;
+}
+.menu_statistics h4 {
     text-align: center;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 16px;
+    padding-left: 10px;
 }
-.menu_statistics p{
+.menu_statistics p {
     text-align: center;
     font-size: 14px;
 }
-.Reviews{
+.Reviews {
     height: 70%;
     width: 100%;
     padding-top: 20px;
-    background: url(../img/cherta_zag.png) 50% 15%/auto 1% no-repeat,
-        url(../img/photo_otz.png) 50% 40%/ auto 30% no-repeat;
+    background: url(../img/cherta_zag.png) 50% 15%/auto 1% no-repeat, url(../img/photo_otz.png) 50% 40%/ auto 30% no-repeat;
 }
-.Reviews h3{
+.Reviews h3 {
     font-size: 20px;
     text-align: center;
     margin-bottom: 280px;
 }
-.Reviews p{
+.Reviews p {
     padding: 14px 200px 14px 200px;
     font-size: 14px;
     text-align: center;
 }
-footer {
+.contakt {
     height: 100%;
     width: 100%;
-    }
-.contakt{
-    background:url(../img/cherta_zag.png) 50% 15%/auto 1% no-repeat, 
-        url(../img/fon_kontakt.jpg) 50% 70%/auto 200% no-repeat;
+    background: url(../img/fon_kontakt.jpg) center/cover no-repeat;
 }
-/* не могу развернуть фон нв свю длинну*!!!/
+.contakt h3 {
+    padding-top: 50px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+.photo_cherta {
+    padding-top: 30px;
+    padding-left: 47.5%;
+}
+.contakt p {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+.menu_contakt li {
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 350px;
+}
+.menu_contakt li:nth-child(2) {
+    padding-left: 150px;
+}
+.menu_contakt li:nth-child(3) {
+    padding-left: 150px;
+    padding-right: 300px;
+}
+.contakt h5 {
+    padding-top: 100px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.name {
+    float: left;
+    height: 25px;
+    width: 330px;
+    margin-left: 330px;
+}
+.email {
+    float: left;
+    height: 25px;
+    width: 330px;
+    margin-left: 35px;
+}
+#text {
+    margin: 15px 330px;
+}
+.send {
+    height: 24px;
+    text-align: center;
+    border: 2px solid #fff;
+    background: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 8px;
+    margin: 0.3% 47%;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+.send:hover {
+    background: #fff;
+    color: #060660;
+}
+.send:active {
+    transform: scale(1.1);
+}
+footer {
+    height: 70%;
+    width: 100%;
+    background: url(../img/karta.jpg) center/ cover no-repeat;
+}
+.footer__ {
+    display: block;
+    position: relative;
+    top: 440px;
+    max-width: 100%;
+    height: 13%;
+    border: 2px solid #03032e;
+    background-color: #03032e;
+}
+.footer__ p {
+    padding-top: 22px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
